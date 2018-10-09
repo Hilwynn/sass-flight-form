@@ -42,7 +42,7 @@ class App extends React.Component {
             <div className="airport-select-field">
               <div className="airport-select-wrapper">
                 <label htmlFor="departure">
-                  <span className="airport-select-label">Fly from</span>
+                  <span className="airport-select-label">Flyg från</span>
                   <input type="text" id="departure" />
                   <span className="airport-select-icon">
                     <i className="fas fa-plane-departure" />
@@ -52,7 +52,7 @@ class App extends React.Component {
               </div>
               <div className="airport-select-wrapper">
                 <label htmlFor="destination">
-                  <span className="airport-select-label">Fly to</span>
+                  <span className="airport-select-label">Flyg till</span>
                   <input type="text" id="destination" />
                   <span className="airport-select-border" />
                   <span className="airport-select-icon">
