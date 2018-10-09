@@ -1,0 +1,19 @@
+@mixin pseudoLineElement($backgroundColor, $relativePosition, $pixelPosition) {
+  background-color: $backgroundColor;
+  content: "";
+  display: block;
+  height: 3px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  #{$relativePosition}: $pixelPosition;
+}
+
+@mixin spanLineElement($color) {
+  border-top: 3px solid $color;
+  display: block;
+  margin-bottom: 0;  
+  margin-top: 3px;
+  position: relative;
+  z-index: 3;
+}

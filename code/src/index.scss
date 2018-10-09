@@ -1,0 +1,116 @@
+@import "colors.scss";
+@import "mixins.scss";
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.booking-container {
+  margin: 150px auto;
+  max-width: 850px;
+  .tabs {
+    display: flex;
+    .tab {
+      color: #fff;
+      background-color: $blue;
+      margin-right: 2px;
+      padding: 20px 15px 7.5px;
+      i {
+        color: #fff;
+        margin-right: 10px;
+      }
+      &:hover {
+        background-color: $blue-dark;
+      }
+      &:first-child {
+        background-color: $gray;
+        color: #000;
+        position: relative;
+          i {
+            color: $blue;
+          }
+          &:before {
+            @include pseudoLineElement($red, top, -6px);
+          }
+        }
+      }
+    }
+  .form {
+    background-color: $gray;
+    box-shadow:0 0 40px 1px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    width: 100%;
+    a {
+      border-bottom-style: dotted;
+      color: $blue;
+      text-decoration: none;
+    }
+    .airport-select-field {
+      display: flex;
+      justify-content: space-between;
+      .airport-select-wrapper {
+        margin-top: 30px;
+        position: relative;
+        width: calc(50% - 10px);
+        .airport-select-label {
+          display: block;
+          font-weight: bold;
+          margin-bottom: 6px;
+          padding: 0;
+          position: relative;
+          z-index: 3;
+        }
+        input {
+          border: none;
+          line-height: 26px;
+          outline: none;
+          padding: 10px;
+          width: 100%;
+        }
+        .airport-select-border {
+          @include spanLineElement($gray-dark);
+        }
+        .airport-select-icon {
+          position: absolute;
+          z-index: 4;
+          right: 12px;
+          bottom: 18px;
+          i {
+            color: $blue;
+          }
+        }
+      }
+    }
+    p {
+      margin-top: 5px;
+    }
+    button {
+      background-color: $red;
+      border: none;
+      color: #fff;
+      font-size: 18px;
+      margin: 10px 0 20px;
+      outline: none;
+      padding: 20px 55px 12px 15px;
+      position: relative;
+      &:before {
+        @include pseudoLineElement($blue, bottom, -6px);
+      }
+      &:hover {
+        background-color: $red-dark;
+      }
+    }
+  }
+}
